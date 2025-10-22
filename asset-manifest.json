@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/manual-cross-line-count/static/css/main.5e10303d.css",
+    "main.js": "/manual-cross-line-count/static/js/main.9380f91a.js",
+    "static/js/453.fea63108.chunk.js": "/manual-cross-line-count/static/js/453.fea63108.chunk.js",
+    "index.html": "/manual-cross-line-count/index.html",
+    "main.5e10303d.css.map": "/manual-cross-line-count/static/css/main.5e10303d.css.map",
+    "main.9380f91a.js.map": "/manual-cross-line-count/static/js/main.9380f91a.js.map",
+    "453.fea63108.chunk.js.map": "/manual-cross-line-count/static/js/453.fea63108.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e10303d.css",
+    "static/js/main.9380f91a.js"
+  ]
+}
