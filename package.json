@@ -1,7 +1,7 @@
 {
   "name": "manual-cross-line-count",
   "version": "0.1.0",
-  "homepage": "https://code.devsnc.com/pages/mahmoud-hassan/manual-cross-line-count/",
+  "homepage": "https://mahmoudhassan77.github.io/manual-cross-line-count/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
