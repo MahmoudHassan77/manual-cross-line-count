@@ -61,15 +61,19 @@ function App() {
   };
 
   const handleButtonClick = (lineName, type) => {
-    const now = new Date();
-    const date = now.toLocaleDateString('en-GB'); // DD/MM/YYYY
-    const time = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); // HH:MM:SS
+   const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const datetime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; // YYYY-MM-DD HH:MM:SS
     
     const newRecord = {
       lineName,
       type, // 'In' or 'Out'
-      date,
-      time,
+      datetime,
       timestamp: now.getTime() // For sorting
     };
     
@@ -81,10 +85,8 @@ function App() {
     const data = records.map(record => ({
       'Line Name': record.lineName,
       'Type': record.type,
-      'Date': record.date,
-      'Time': record.time
-    }));
-
+      'DateTime': record.datetime || ${record.date} ${record.time} // Support both old and new format
+    }));
     // Create worksheet
     const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
