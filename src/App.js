@@ -61,7 +61,7 @@ function App() {
   };
 
   const handleButtonClick = (lineName, type) => {
-    const now = new Date();
+   const now = new Date();
     const year = now.getFullYear();
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
@@ -85,9 +85,8 @@ function App() {
     const data = records.map(record => ({
       'Line Name': record.lineName,
       'Type': record.type,
-      'DateTime': record.datetime || ${record.date} ${record.time} // Support both old and new format
+      'DateTime': record.datetime || `${record.date} ${record.time}` // Support both old and new format
     }));
-
     // Create worksheet
     const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
