@@ -85,7 +85,7 @@ function App() {
     const data = records.map(record => ({
       'Line Name': record.lineName,
       'Type': record.type,
-      'DateTime': record.datetime || ${record.date} ${record.time} // Support both old and new format
+      'DateTime': record.datetime || `${record.date} ${record.time}` // Support both old and new format
     }));
     // Create worksheet
     const ws = XLSX.utils.json_to_sheet(data);
